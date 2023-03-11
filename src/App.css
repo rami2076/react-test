@@ -9,7 +9,7 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: 10s ease 0s infinite beat-and-rotation;
   }
 }
 
@@ -28,11 +28,12 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@keyframes beat-and-rotation {
+  0%, 50%, 100% { transform:rotate(0deg) scale(1, 1); }
+  30%, 80% { transform: rotate(360deg) scale(0.52, 0.55); }
+}
+
+@keyframes pulse {
+  0%, 50%, 100% {  background: #fee; }
+  30%, 80% { background: #fff; }
 }
